@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>converter</title>
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+ <style type="text/css">
+
+ 	body{
+ 		   padding:70px;
+ 		   background-image: url('math1.jpg')
+       
+    	}
+
+ 	.h3{
+ 		  text-align: center;
+      font-family: cursive;
+      font-size:50px;
+      color: #e6edda;
+      text-shadow:4px 4px 4px red,
+                  2px 1px 3px yellow,
+                  1px 1px 3px red;
+  	 }
+
+ 	#maindiv{
+ 		        text-align: center;
+ 		        margin-top: 50px;
+ 		        background-color: #ebf2ed;
+                background-image: url('math7.jpg');
+                padding:70px;
+ 		        font-size: 25px; 
+ 		        font-family:sans-serif;
+ 		        border:outset 4px #d9a49a;
+ 	        }
+ 
+ 	.div1{
+ 		    display: inline-block;
+ 	     }
+
+ 	.inp{
+ 		   width: 270px;
+ 		   border:outset 4px #e7eb7f;
+           border-radius: 20px;
+ 		   margin-top: 14px;
+ 		   margin-left:30px;
+           box-shadow: 5px 7px 7px #dbbe2c;
+	    }
+
+  label {
+         font-size: 35px;
+         letter-spacing:3px;
+         color: white;
+         text-shadow:4px 4px 4px red,
+                  2px 1px 3px yellow,
+                  1px 1px 3px red;
+        }
+
+	.inp:hover {
+		          background-color:#f0f2bb;
+              border:groove 4px #c1e5e8;
+              box-shadow: 5px 7px 7px #f0f2bb;
+	            }
+
+
+ </style>
+
+</head>
+<body>
+
+  <h3 class="h3">Tempreature Converter</h3>
+
+  <div id="maindiv">
+
+  	 <div class="div1">
+  	 	<label><b>Celsius</b></label><br>
+  	 	<input type="number" value="0" id="in1" class="inp">
+  	 </div>
+        
+  	 <div class="div1">
+  	 	<label><b>Fahrenheit</b></label><br>
+        <input type="number" value="32" id="in2" class="inp">
+  	 </div>
+
+  </div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	
+  var cel = document.getElementById("in1");
+  var fah = document.getElementById("in2");
+
+    cel.addEventListener('input',function(){
+    	var c = this.value;
+    	var f = (c * 1.8) + 32;
+    	if(!Number.isInteger(f)){
+    		f = f.toFixed(4)
+    	}
+    	fah.value = f
+    });
+
+    fah.addEventListener('input',function(){
+    	var f = this.value;
+    	var c = (f - 32) * 5/9;
+    	if(!Number.isInteger(c)){
+    		c = c.toFixed(4)
+    	}
+    	cel.value = c;
+    })
+
+</script>

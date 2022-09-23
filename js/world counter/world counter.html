@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>world counter</title>
+
+  <style type="text/css">
+  	
+   body{
+   	    padding: 40px 170px ;
+   }
+   
+   h1{
+   	  text-align: center;
+   	  background-color: #c2edce;
+   	  width: 84.5%;
+   	  font-family: sans-serif;
+   	  border:outset 10px #bcd1ce ;
+   	  font-size: 37px;
+   	  color: white;
+   	  padding: 20px;
+   	  margin: 0px;
+   	  letter-spacing: 2px;
+   	  text-shadow:7px 7px 6px #e33681,
+                  2px 3px 3px yellow,
+                  1px 3px 3px red;
+   }
+
+   #txtbox{
+   	  width: 87.9%;
+   	  border:groove 4px;
+   	  background-color:#e6ebf5;
+   	  color: black;
+   	  padding: 10px;
+   	  font-size: 17px;
+     }
+
+   p{
+   	 text-align: center;
+   	 font-size: 28px;
+   	 text-align: center;
+   	  background-color: #c2edce;
+   	  width: 86%;
+   	  font-weight: bold;
+   	  padding: 24px;
+   	  margin: 0px;
+   	  font-family: sans-serif;
+   	  letter-spacing: 2px;
+   	  text-shadow:7px 4px 7px #20e3b5,
+                  0px 0px 0px yellow,
+                  1px 1px 3px red;
+     }
+
+  </style>
+
+</head>
+<body>
+
+  <h1>World and character counter</h1>
+
+  <textarea cols="30" rows="13" id="txtbox"></textarea>
+
+  <p>
+  	<span id="word">0</span> words and 
+  	<span id="char">0</span> characters
+  </p>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	
+   var textbox = document.getElementById("txtbox");
+
+     textbox.addEventListener('input',function(){
+
+     	var text = this.value;
+     	var char = text.length;
+     	document.getElementById("char").innerHTML=char;
+
+        text =text.trim()   //agal pachad space dur karse
+
+        var words = text.split(" ");
+        var cleanlist = words.filter(function(elm){
+        	return elm != "";
+        });
+     	console.log(cleanlist);
+     	document.getElementById("word").innerHTML=cleanlist.length ;
+     }); 
+
+
+
+</script>

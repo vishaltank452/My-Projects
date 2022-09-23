@@ -1,0 +1,54 @@
+
+
+
+
+    
+  input {
+    	  padding: 2px 20px 0px 20px;
+    	  margin: 10px 10px 10px 10px;
+          cursor: text;
+            
+        }
+
+  .inpdiv{
+          font-size: 30px;
+          margin-left: 20px;
+          background-color: black;
+
+         }
+
+   .container{
+              background-color: black;
+              width: 450px;
+            }
+
+   .text{
+         padding:14px 15px 0px 15px;
+       }
+ 
+   #maindiv{
+             width: 450px;
+              padding: 10px;
+        
+          }
+
+   #clear{
+          padding:9px 20px 9px 20px;
+          }
+
+
+   #pr{
+       padding:0px 20px 0px 3px;
+      }
+
+  .inco{
+    color:#f01a29;
+    
+  }
+
+    
+
+
+
+     
+

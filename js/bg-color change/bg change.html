@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>background changer</title>
+
+ <style type="text/css">
+ 	
+  body {
+  	padding-right: 45px;
+  	background-color: #ebf2f7;
+
+
+  	padding-left: 45px;
+  }
+
+  h1 {
+  	text-align: center;
+  	font-size: 50px;
+  	text-shadow: 2px 2px 7px blue;
+  }
+  h3{
+  	text-align: center;
+  	font-size: 37px;
+  }
+
+  img {
+  	    height: 300px;
+  	    width: 600px;
+        margin-left: 250px;
+      }
+
+  p{
+  	font-size: 20px;
+  	font-family: cursive;
+   }
+
+  .btn{ width: 20px; 
+        height: 20px; 
+        display: inline-block;
+        border: solid 1.7px yellow;
+        border-radius:4px; 
+        cursor: pointer;
+        float: right;
+        margin-left: 4px;
+      }
+
+
+  #white{
+          background-color: #000000;
+        }
+  #red{
+         background-color: #83aef2; 
+       }
+  #blue{
+        background-color: #70e0bf;
+        }
+  #yellow{
+          background-color: #98f781;
+         }
+
+</style>
+
+</head>
+<body>
+       
+  <div id="color-switch">
+  	<span class="btn" id="white" onclick="bgchange('#000000')"></span>
+  	<span class="btn" id="red"   onclick="bgchange('#83aef2')"></span>
+  	<span class="btn" id="blue"  onclick="bgchange('#70e0bf')"></span>
+  	<span class="btn" id="yellow" onclick="bgchange('#98f781')"></span>
+  </div>
+
+  <h1 class="hii">GIR SAFARI</h1>
+
+  <img src="https://girjunglelion.com/image/home/GJLT-1603946874.jpeg" alt="">
+
+  <h3 class="hii">Procedure for Gir Forest Safari Booking</h3>
+
+  <p class="hii">Entire procedure for the safari ride in the Gir National Park are managed and regulated by the Forest Department. In order to avoid the hustle and bustle of last minute, customers are suggested to go forGir Forest Safari Booking in advance. The complete permit for safari ride in the Gir National Park is available only online and in advance. Interested candidates for Online Safari Booking in Gir must have to go through the underneath points which will be useful during the online safari booking.</p>
+
+  <p class="hii">Gir national park has eight routes in total for safari rides. Entire routes move inside the forest only. The best route which you can opt commences from Sasan, Khokhra, Sirvan, Devadungar, Sirvan, Khokhra, Bavalwalachowk, Kamleshwar, Check post of Kankai and the tour ends at Sasan. In this protected aea of Jungle of Gir, there is a only provision to book online safari booking in Gir. This must be known to every tourist that for spotting the Lions in the Gir Jungle only way is to go for Gir Safari booking Online.</p>
+
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+	
+  function bgchange(color){
+  	document.body.style.backgroundColor=color;
+
+  	var txt = document.getElementsByClassName("hii");
+    if (color == '#000000') {
+    	for(var elm of txt){
+    		elm.style.color = 'white';
+    	}
+    }else{
+    	for(var elm of txt){
+    		elm.style.color = 'black';
+    	}
+    }
+  }
+
+</script>

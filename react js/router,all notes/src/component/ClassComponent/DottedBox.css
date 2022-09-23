@@ -1,0 +1,7 @@
+.DottedBox{
+    border:  5px dotted orangered;
+}
+.DottedBox_content{
+    padding: 20px;
+    
+}
